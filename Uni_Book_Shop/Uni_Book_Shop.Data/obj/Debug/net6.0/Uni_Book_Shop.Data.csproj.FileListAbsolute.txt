@@ -1,0 +1,14 @@
+D:\GitHub Desktop\Uni_Book_Shop_BackEnd\Uni_Book_Shop\Uni_Book_Shop.Data\bin\Debug\net6.0\Uni_Book_Shop.Data.deps.json
+D:\GitHub Desktop\Uni_Book_Shop_BackEnd\Uni_Book_Shop\Uni_Book_Shop.Data\bin\Debug\net6.0\Uni_Book_Shop.Data.dll
+D:\GitHub Desktop\Uni_Book_Shop_BackEnd\Uni_Book_Shop\Uni_Book_Shop.Data\bin\Debug\net6.0\ref\Uni_Book_Shop.Data.dll
+D:\GitHub Desktop\Uni_Book_Shop_BackEnd\Uni_Book_Shop\Uni_Book_Shop.Data\bin\Debug\net6.0\Uni_Book_Shop.Data.pdb
+D:\GitHub Desktop\Uni_Book_Shop_BackEnd\Uni_Book_Shop\Uni_Book_Shop.Data\obj\Debug\net6.0\Uni_Book_Shop.Data.csproj.AssemblyReference.cache
+D:\GitHub Desktop\Uni_Book_Shop_BackEnd\Uni_Book_Shop\Uni_Book_Shop.Data\obj\Debug\net6.0\Uni_Book_Shop.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub Desktop\Uni_Book_Shop_BackEnd\Uni_Book_Shop\Uni_Book_Shop.Data\obj\Debug\net6.0\Uni_Book_Shop.Data.AssemblyInfoInputs.cache
+D:\GitHub Desktop\Uni_Book_Shop_BackEnd\Uni_Book_Shop\Uni_Book_Shop.Data\obj\Debug\net6.0\Uni_Book_Shop.Data.AssemblyInfo.cs
+D:\GitHub Desktop\Uni_Book_Shop_BackEnd\Uni_Book_Shop\Uni_Book_Shop.Data\obj\Debug\net6.0\Uni_Book_Shop.Data.csproj.CoreCompileInputs.cache
+D:\GitHub Desktop\Uni_Book_Shop_BackEnd\Uni_Book_Shop\Uni_Book_Shop.Data\obj\Debug\net6.0\Uni_Book_Shop.Data.dll
+D:\GitHub Desktop\Uni_Book_Shop_BackEnd\Uni_Book_Shop\Uni_Book_Shop.Data\obj\Debug\net6.0\ref\Uni_Book_Shop.Data.dll
+D:\GitHub Desktop\Uni_Book_Shop_BackEnd\Uni_Book_Shop\Uni_Book_Shop.Data\obj\Debug\net6.0\Uni_Book_Shop.Data.pdb
+D:\GitHub Desktop\Uni_Book_Shop_BackEnd\Uni_Book_Shop\Uni_Book_Shop.Data\bin\Debug\net6.0\Uni_Book_Shop.Data.runtimeconfig.json
+D:\GitHub Desktop\Uni_Book_Shop_BackEnd\Uni_Book_Shop\Uni_Book_Shop.Data\obj\Debug\net6.0\Uni_Book_Shop.Data.genruntimeconfig.cache
