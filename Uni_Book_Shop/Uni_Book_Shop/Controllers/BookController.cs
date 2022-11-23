@@ -28,6 +28,12 @@ namespace Uni_Book_Shop.WebApi.Controllers
             var one_book = await _service.GetSearchedBooks(searched);
             return Ok(one_book);
         }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> BookByID(int id)
+        {
+            return Ok(await _service.GetBookByIdAsync(id));
+        }
+
         //[HttpGet("checkBox")]
         //public async Task<IActionResult> GetCheckedBooks(List<Enum> searched)
         //{

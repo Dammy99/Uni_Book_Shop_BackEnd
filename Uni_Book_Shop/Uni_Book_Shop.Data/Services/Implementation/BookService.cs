@@ -27,7 +27,11 @@ namespace Uni_Book_Shop.Data.Services.Implementation
             var book_list = _context.Books.Where(x => x.Name.Contains(searched)).ToListAsync();
             return await book_list;
         }
-
+        public async Task<Book> GetBookByIdAsync(int id)
+        {
+            var id_book = await _context.Books.FirstAsync(x => x.Id == id);
+            return id_book;
+        }
         //public Task<IReadOnlyList<Book>> GetBooksByCheckbox(List<Enum> ts)
         //{
         //    var book_list = _context.Books.Where(x=> x.Theme.Contains(WhatToSearch(ts));

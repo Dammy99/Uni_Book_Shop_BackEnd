@@ -10,6 +10,7 @@ namespace Uni_Book_Shop.Data.Services.Interface
     {
         Task<IReadOnlyList<Book>> GetAllBooksAsync();
         Task<IReadOnlyList<Book>> GetSearchedBooks(string searched);
+        Task<Book> GetBookByIdAsync(int id);
         //Task<IReadOnlyList<Book>> GetBooksByCheckbox(List<Enum> ts);
     }
 }
