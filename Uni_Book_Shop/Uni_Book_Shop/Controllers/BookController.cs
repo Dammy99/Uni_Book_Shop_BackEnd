@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Text.Json;
 using Uni_Book_Shop.Data.Context;
+using Uni_Book_Shop.Data.Extentions;
 using Uni_Book_Shop.Data.Services.Interface;
 
 namespace Uni_Book_Shop.WebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/books")]
     [ApiController]
     public class BookController : ControllerBase
     {
@@ -16,7 +19,7 @@ namespace Uni_Book_Shop.WebApi.Controllers
             _context = context;
             _service = service;
         }
-        [HttpGet]
+        [HttpGet("wwwwww")]
         public async Task<IActionResult> GetBooks()
         {
             var book_list = await _service.GetAllBooksAsync();
@@ -34,11 +37,17 @@ namespace Uni_Book_Shop.WebApi.Controllers
             return Ok(await _service.GetBookByIdAsync(id));
         }
 
-        //[HttpGet("checkBox")]
-        //public async Task<IActionResult> GetCheckedBooks(List<Enum> searched)
-        //{
-        //    var one_book = await _service.GetBooksByCheckbox(searched);
-        //    return Ok(one_book);
-        //}
+        [HttpGet]
+        public async Task<IActionResult> BooksWithParamentres(
+            [FromQuery] PaginationSearchParams @params)
+        {
+            var book_list = await _service.GetBooksWithAllParametresAsync(@params.q);
+
+            Response.Headers.Add("X-TotalCount", JsonSerializer.Serialize(_service.GetAmountOfBooks(book_list)));
+
+            book_list = _service.GetPaginatedList(@params.Page, book_list);
+
+            return Ok(book_list);
+        }
     }
 }
