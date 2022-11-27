@@ -41,7 +41,7 @@ namespace Uni_Book_Shop.WebApi.Controllers
         public async Task<IActionResult> BooksWithParamentres(
             [FromQuery] PaginationSearchParams @params)
         {
-            var book_list = await _service.GetBooksWithAllParametresAsync(@params.q);
+            var book_list = await _service.GetBooksWithAllParametresAsync(@params.q, @params.check!);
 
             Response.Headers.Add("X-TotalCount", JsonSerializer.Serialize(_service.GetAmountOfBooks(book_list)));
 

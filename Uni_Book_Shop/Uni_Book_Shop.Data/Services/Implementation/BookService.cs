@@ -34,7 +34,7 @@ namespace Uni_Book_Shop.Data.Services.Implementation
             return id_book;
         }
 
-        public async Task<IReadOnlyList<Book>> GetBooksWithAllParametresAsync(string searched) //, List<string> vs
+        public async Task<IReadOnlyList<Book>> GetBooksWithAllParametresAsync(string searched, IReadOnlyList<string> vs)
         {
             var needed_books = await _context.Books.ToListAsync();
 
@@ -42,17 +42,17 @@ namespace Uni_Book_Shop.Data.Services.Implementation
             {
                 needed_books = await _context.Books.Where(x => x.Name.Contains(searched)).ToListAsync();
             }
-            //if (vs.Count > 0)
-            //{
-            //    needed_books = needed_books.Any(x => vs.Any(y => y == x.Theme));
-            //}
+
+            if (vs != null)
+            {
+                needed_books = needed_books.Where(x => vs.Any(y => y == x.Theme)).ToList();
+            }
 
             return needed_books;
         }
 
         public IReadOnlyList<Book> GetPaginatedList(int page, IReadOnlyList<Book> books)
         {
-            Constants x = new();
             books = books.Skip((page - 1) * Constants.ItemsPerPage)
                 .Take(Constants.ItemsPerPage).ToList();
             return books;
