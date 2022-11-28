@@ -15,6 +15,8 @@ namespace Uni_Book_Shop.Data.Services.Interface
         Task<IReadOnlyList<Book>> GetBooksWithAllParametresAsync( string searched, IReadOnlyList<string> vs);
         IReadOnlyList<Book> GetPaginatedList(int page, IReadOnlyList<Book> books);
         int GetAmountOfBooks(IReadOnlyList<Book> books);
+        Task<IReadOnlyList<string>> GetAllExistThemes();
+
         //Task<IReadOnlyList<Book>> GetBooksByCheckbox(List<Enum> ts);
     }
 }

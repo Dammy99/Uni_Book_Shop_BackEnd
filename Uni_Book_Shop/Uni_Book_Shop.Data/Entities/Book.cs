@@ -14,4 +14,5 @@
         public string Edition { get; set; } = null!;
         public int Amount { get; set; }
     }
+
 }

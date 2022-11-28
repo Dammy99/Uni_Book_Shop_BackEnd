@@ -41,13 +41,19 @@ namespace Uni_Book_Shop.WebApi.Controllers
         public async Task<IActionResult> BooksWithParamentres(
             [FromQuery] PaginationSearchParams @params)
         {
-            var book_list = await _service.GetBooksWithAllParametresAsync(@params.q, @params.check!);
+            var book_list = await _service.GetBooksWithAllParametresAsync(@params.q, @params.theme!);
 
             Response.Headers.Add("X-TotalCount", JsonSerializer.Serialize(_service.GetAmountOfBooks(book_list)));
 
             book_list = _service.GetPaginatedList(@params.Page, book_list);
 
             return Ok(book_list);
+        }
+
+        [HttpGet("themes")]
+        public async Task<IActionResult> ThemesFromBooks()
+        {
+            return Ok(await _service.GetAllExistThemes());
         }
     }
 }

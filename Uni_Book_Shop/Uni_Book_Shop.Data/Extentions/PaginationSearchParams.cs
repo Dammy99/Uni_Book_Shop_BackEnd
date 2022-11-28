@@ -16,7 +16,7 @@ namespace Uni_Book_Shop.Data.Extentions
         [FromQuery]
         public string q { get; set; } = string.Empty;
         [FromQuery]
-        public IReadOnlyList<string>? check { get; set; }
+        public IReadOnlyList<string>? theme { get; set; }
 
 
     }

@@ -45,7 +45,23 @@ namespace Uni_Book_Shop.Data.Services.Implementation
 
             if (vs != null)
             {
-                needed_books = needed_books.Where(x => vs.Any(y => y == x.Theme)).ToList();
+                List<string> list = new();
+                var people = new Dictionary<string, string>()
+                {
+                    { "детектив", "Детектив" },
+                    { "пригоди", "Пригоди" }
+                };
+                foreach (var item in people)
+                {
+                    if (vs.Any(x=> x == item.Key))
+                    {
+                        list.Add(item.Value);
+                    }
+                }
+
+                needed_books = needed_books.Where(x => list.Any(y=> y == x.Theme)).ToList();
+
+                //needed_books = needed_books.Where(x => vs.Any(y => y == x.Theme)).ToList();
             }
 
             return needed_books;
@@ -62,6 +78,12 @@ namespace Uni_Book_Shop.Data.Services.Implementation
         {
             var amount = books.Count();
             return amount;
+        }
+
+        public async Task<IReadOnlyList<string>> GetAllExistThemes()
+        {
+            var themes_list = await _context.Books.Select(x => x.Theme).Distinct().ToListAsync();
+            return themes_list;
         }
 
         //public Task<IReadOnlyList<Book>> GetBooksByCheckbox(List<Enum> ts)
